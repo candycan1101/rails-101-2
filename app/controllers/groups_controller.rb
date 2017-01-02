@@ -76,10 +76,10 @@ def find_group_and_check_permission
   if current_user != @group.user
     redirect_to root_path, alert: "You have no permission"
   end
+end
 
 def group_params
   params.require(:group).permit(:title, :description)
 end
 
-end
 end
